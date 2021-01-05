@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zacharie les flexs</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    .container{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .header{
+      background: red;
+      height: 50px;
+    }
+    .body{
+      background: green;
+      flex: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+    }
+    .sidebars{
+      background: blue;
+      display: flex;
+      flex-basis: 200px;
+      flex-flow: column nowrap;
+    }
+    .sidebars span{
+      margin: 8px;
+      flex-basis: 20px;
+      background: white;
+    }
+    .boite{
+      display: flex;
+      flex-flow: row wrap;
+      flex: auto;
+      padding: 0.2rem;
+      align-content: flex-start;
+    }
+    .boite div{
+      background: purple;
+      flex-basis: 200px;
+      height: 300px;
+      margin: 1rem;
+    
+    }
+ 
+  </style>
+</head>
+<body>
+  <div  class="container"> 
+    <div class="header">0</div>
+    <div class="body">
+      <div class="sidebars">
+        <span class="elem">1</span>
+        <span class="elem">2</span>
+        <span class="elem">3</span>
+        <span class="elem">4</span>
+        <span class="elem">5</span>
+      </div>
+      <div class="boite">
+         <div class="elem-">1</div>
+         <div class="elem-">2</div>
+         <div class="elem-">3</div>
+         <div class="elem-">4</div>
+         <div class="elem-">5</div>
+         <div class="elem-">6</div>
+         <div class="elem-">7</div>
+         <div class="elem-">8</div>
+         <div class="elem-">9</div>
+         <div class="elem-">10</div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

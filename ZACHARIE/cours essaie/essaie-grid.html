@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Grilles</title>
+</head>
+<style>
+  *{
+    margin: 0;
+  }
+  .container{
+    background: green;
+    display: grid;
+    height: 100vh;
+    grid:
+      "e1 e1 e1" 50px
+      "e2 e5 e5" 50px
+      "e2 e6 e7" auto
+      "e2 e6 e8" 100px
+      "e2 e3 e3" 50px
+      "e4 e4 e4" 50px /
+       1fr  2fr 1fr;
+    gap: 10px;
+
+  }
+
+  .elem{
+    padding: 1rem;
+    background: red;
+  }
+  .elem:nth-child(1){
+    grid-area: e1;
+  }
+  .elem:nth-child(2){
+    grid-area: e2;
+  }
+  .elem:nth-child(3){
+    grid-area: e3;
+  }
+  .elem:nth-child(4){
+    grid-area: e4;
+  }
+  .elem:nth-child(5){
+    grid-area: e5;
+  }
+  .elem:nth-child(6){
+    grid-area: e6;
+  }
+  .elem:nth-child(7){
+    grid-area: e7;
+  }
+  .elem:nth-child(8){
+    grid-area: e8;
+  }
+  
+</style>
+<body>
+  <div class="container">
+    <div class="elem">elem-1</div>
+    <div class="elem">elem-2</div>
+    <div class="elem">elem-3</div>
+    <div class="elem">elem-4</div>
+    <div class="elem">elem-5</div>
+    <div class="elem">elem-6</div>
+    <div class="elem">elem-7</div>
+    <div class="elem">elem-8</div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Les grilles</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .conteneur {
+        display: grid;
+        margin: 2em;
+        display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+        grid-gap: 1em;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        filter: blur(0px) grayscale(0);
+        transition: filter 0.5s ease-out;
+      }
+
+      .title {
+        font-size: 2em;
+        font-family: "Anton", sans-serif;
+        letter-spacing: 0.4em;
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(90, 0, 10, 0.3);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        text-shadow: 2px 2px 10px #000000;
+      }
+
+      article {
+        position: relative;
+      }
+
+      article:hover {
+        z-index: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      article:hover img {
+        filter: blur(2px) grayscale(0.5);
+        transition: filter 0.2s ease-in;
+      }
+
+      article:hover .title {
+        opacity: 1;
+        transition: all 0.4s ease-in;
+        text-shadow: 4px 5px 10px #1e3799;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Gallerie des villes</h2>
+    <div class="conteneur">
+      <article>
+        <span class="title">Paris</span>
+        <img
+          src="https://source.unsplash.com/random/400x300?paris+cityscape"
+          alt="paris"
+        />
+      </article>
+      <article>
+        <span class="title">Londres</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?london+cityscape"
+          alt="london"
+        />
+      </article>
+      <article>
+        <span class="title">New York</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?newyork+cityscape"
+          alt="newyork"
+        />
+      </article>
+      <article>
+        <span class="title">Pékin</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?pekin+cityscape"
+          alt="pekin"
+        />
+      </article>
+      <article>
+        <span class="title">Dehli</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?dehli+cityscape"
+          alt="dehli"
+        />
+      </article>
+      <article>
+        <span class="title">Tokyo</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?tokyo+cityscape"
+          alt="tokyo"
+        />
+      </article>
+      <article>
+        <span class="title">Jakarta</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?jakarta+cityscape"
+          alt="jakarta"
+        />
+      </article>
+      <article>
+        <span class="title">Shanghai</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?shanghai+cityscape"
+          alt="shanghai"
+        />
+      </article>
+      <article>
+        <span class="title">Berlin</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?berlin+cityscape"
+          alt="berlin"
+        />
+      </article>
+    </div>
+  </body>
+</html>

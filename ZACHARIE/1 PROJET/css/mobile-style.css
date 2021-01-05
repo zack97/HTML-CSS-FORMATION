@@ -1,0 +1,45 @@
+@media (max-width: 500px) {
+  .header nav h1 {
+    float: none;
+    text-align: center;
+    color: red;
+  }
+  .header nav ul {
+    float: none;
+  }
+  .header nav ul li {
+    float: none;
+    text-align: center;
+  }
+  .icon {
+    text-align: left;
+    display: block;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+  .icons {
+    text-align: left;
+    float: none;
+    display: block;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+  .where {
+    padding: 100px 0;
+  }
+  .where-img {
+    float: none;
+    border: none;
+    width: 300px;
+    display: block;
+    margin: auto;
+  }
+  .where-text {
+    float: none;
+    display: block;
+    margin: auto;
+    width: auto;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+}

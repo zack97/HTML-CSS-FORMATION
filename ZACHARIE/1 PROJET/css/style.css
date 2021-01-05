@@ -1,0 +1,236 @@
+Body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #111;
+  line-height: 0.7em;
+  overflow: auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header nav ul :hover,
+.active {
+  background-color: #444;
+}
+
+.header nav h1 {
+  float: left;
+  padding: 30px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+.header nav ul {
+  float: right;
+  list-style: none;
+  display: block;
+}
+.header nav ul li {
+  float: left;
+  padding: 30px;
+}
+
+/* SECTION */
+
+.toute {
+  height: 700px;
+  background-image: url(../img/cafe1.jpg);
+  position: center center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.espace {
+  border: 5px solid black;
+  width: 60px;
+  margin-left: 260px;
+}
+.toute-1 h1 {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.toute-1 p {
+  padding: 10px;
+}
+.toute-1 {
+  display: inline-block;
+  max-width: 600px;
+  padding-top: 250px;
+  display: block;
+  margin: auto;
+}
+.toute-lien {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700px;
+  display: inline-block;
+  margin-top: 30px;
+}
+.lien {
+  background-color: white;
+  color: #222;
+}
+.lien:hover {
+  background: black;
+  color: white;
+}
+
+/* ICON */
+
+.icon {
+  overflow: auto;
+  padding: 100px 0px;
+  text-align: center;
+}
+.icons {
+  float: left;
+  width: 50%;
+}
+
+/* RESERVATION */
+
+.image {
+  height: 400px;
+  background-image: url(../img/cafe3.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.reservation {
+  padding: 100px 0px;
+  text-align: center;
+}
+.reserve h2 {
+  margin: 10px 0px 10px 0px;
+}
+
+.reserve a {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.blak {
+  background: black;
+  color: white;
+}
+.blak:hover {
+  background: white;
+  color: black;
+}
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 20px;
+}
+
+/*  PAGE 2 */
+
+.where {
+  min-height: 100vh;
+  padding: 180px 150px 150px;
+  overflow: auto;
+}
+
+.where-img {
+  float: left;
+  width: 45%;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+.where-text {
+  float: right;
+  width: 50%;
+}
+
+.metro {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #888;
+  width: 30px;
+  background: #333;
+  color: white;
+  border-radius: 100%;
+}
+
+.move {
+  background: #7a238a;
+}
+.choc {
+  background: #a38068;
+}
+.under {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.espace-text {
+  margin-top: 30px;
+}
+
+/* CONTACT */
+
+.contact {
+  min-height: 100vh;
+  overflow: auto;
+  margin: 180px 0px 100px 0px;
+  font-weight: bold;
+}
+.contact-form {
+  display: block;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form label {
+  display: block;
+}
+.contact-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+.contact-form textarea {
+  min-height: 80px;
+  width: 100%;
+  margin-left: 20px;
+}
+.blo {
+  margin: 20px;
+}
+
+.contact-form button {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px 0px 0px 20px;
+}
+.contact-form button:hover {
+  background: white;
+  color: black;
+}
+.contact-form h1 {
+  margin-left: 20px;
+}

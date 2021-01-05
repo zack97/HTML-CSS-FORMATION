@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pseudo-éléments</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .test::after {
+      content: "Crée un pseudo-élément en CSS !";
+      background-color: #ffba10;
+      border: 1px dotted black;
+    }
+
+    ::selection {
+      background-color: cyan;
+      color: red;
+    }
+
+    .test2::first-line {
+      color: red;
+    }
+
+    .test3 {
+      margin: 0 151px 0 40px;
+    }
+
+    .test3::first-letter {
+      color: red;
+      font-size: 130%;
+    }
+
+    span[data-description] {
+      position: relative;
+      padding-bottom: 0.8px;
+      border-bottom: 1px dashed blue;
+      color: #00f;
+      cursor: help;
+    }
+
+    span[data-description]:hover::after {
+      content: attr(data-description);
+      position: absolute;
+      left: 0;
+      top: 23px;
+      min-width: 150px;
+      border: 1px #aaaaaa solid;
+      border-radius: 10px;
+      background-color: #f7ccff;
+      padding: 12px;
+      color: black;
+      font-size: 14px;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="test">Test</p>
+  <input type="text" placeholder="Ecrivez et sélectionnez" />
+  <p class="test2">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, et?
+    Delectus quo accusamus quam veniam quasi laudantium aspernatur, reiciendis
+    possimus hic dolorum exercitationem rem aliquid laborum voluptatum sunt
+    nulla, minus voluptate non velit expedita explicabo, tempore corrupti
+    repellendus? Necessitatibus facere aliquam explicabo dignissimos odit
+    dolor aliquid quos veniam itaque optio a provident cum illum similique
+    accusantium, beatae possimus, nesciunt eligendi commodi saepe recusandae
+    culpa dolores voluptas! Numquam sapiente ex accusamus ducimus laudantium
+    cum voluptatum voluptas molestias maiores. Sapiente mollitia earum tenetur
+    officiis quaerat! Suscipit, nam ut assumenda, cum repudiandae architecto
+    voluptatem eum magnam, obcaecati natus laudantium! Eos accusantium
+    temporibus esse!
+  </p>
+  <p class="test3">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem,
+    quia expedita illo
+    <span data-description="Le contenu de la bulle">w repellendus incidunt rerum vel</span>
+    dolore aspernatur
+    <span data-description="Le contenu de la bulle qui est plus long. Beaucoup plus long.">wzrq repellendus incidunt
+      rerum vel</span>
+    doloremque molestiae non explicabo fugiat nobis qui.
+  </p>
+</body>
+
+</html>

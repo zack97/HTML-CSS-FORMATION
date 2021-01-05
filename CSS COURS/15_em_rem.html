@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Les unités relatives/ EM & REM</title>
+  <style>
+    .div-em {
+      font-size: 1.2em;
+    }
+
+    .div-rem {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Les em</h2>
+  <!-- Le problème : la taille relative en em est en fonction de la taille de l'élément parent.
+    Ici, la 3ème div a pour taille 16px * 1.2 * 1.2 * 1.2 = 27.648px.
+    En effet, son parent a pour taille 1.2 * 1.2 * 16px et le parent de son parent 1.2 * 16px -->
+  <div class="div-em">
+    Dans la première div
+    <div class="div-em">
+      Dans la seconde div
+      <div class="div-em">Dans la troisième div</div>
+    </div>
+  </div>
+
+  <h2>Les rem</h2>
+  <!-- Plus simple en rem. Tous les éléments ont une taille de 1.2 * 16 px -->
+  <div class="div-rem">
+    Dans la première div
+    <div class="div-rem">
+      Dans la seconde div
+      <div class="div-rem">Dans la troisième div</div>
+    </div>
+  </div>
+</body>
+
+</html>

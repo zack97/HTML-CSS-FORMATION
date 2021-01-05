@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Les grilles</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 5px;
+    }
+
+    .container-flex {
+      display: inline-flex;
+      flex-flow: column;
+      margin-bottom: 5px;
+      width: 50%;
+      height: 33vh;
+    }
+
+    .container {
+      display: inline-grid;
+      margin-left: 5px;
+      border: red solid 2px;
+    }
+
+    img {
+      width: 200px;
+    }
+
+    .elem {
+      background: #4a69bd;
+      border: 1px solid black;
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .elem-1 {
+      background: #eb2f06;
+    }
+
+    .elem-2 {
+      background: #fa983a;
+    }
+
+    .elem-3 {
+      background: #1e3799;
+    }
+
+    .elem-4 {
+      background: #78e08f;
+    }
+
+    .elem-5 {
+      background: #f8c291;
+    }
+
+    /* Agrandissez pour voir la différence entre auto-fill et
+        auto-fit ! */
+    .auto-fill-content {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+    }
+
+    .auto-fit-content {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Utilisation d'auto-fill</h2>
+  <div class="container-flex">
+    <div class="container auto-fill-content">
+      <div class="elem elem-1">Un texte</div>
+      <div class="elem elem-2">
+        2
+      </div>
+      <div class="elem elem-3">3</div>
+      <div class="elem elem-4">
+        Un texte plus long qui va du coup aller sur plusieurs lignes
+      </div>
+      <div class="elem elem-5">5</div>
+    </div>
+  </div>
+
+  <h2>Utilisation d'auto-fit</h2>
+  <div class="container-flex">
+    <div class="container auto-fit-content">
+      <div class="elem elem-1">Un texte</div>
+      <div class="elem elem-2">
+        2
+      </div>
+      <div class="elem elem-3">3</div>
+      <div class="elem elem-4">
+        Un texte plus long qui va du coup aller sur plusieurs lignes
+      </div>
+      <div class="elem elem-5">5</div>
+    </div>
+  </div>
+</body>
+
+</html>

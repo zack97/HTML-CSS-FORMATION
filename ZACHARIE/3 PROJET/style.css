@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+/* HEADER */
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+.container {
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  height: 1500px;
+}
+h1 {
+  font-family: "Staatliches", cursive;
+  font-size: 1.8rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.header ul li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+.red-con {
+  color: rgb(170, 20, 20);
+}
+.red-con:hover {
+  opacity: 0.7;
+}
+.red-in {
+  border: 1px solid rgb(170, 20, 20);
+  border-radius: 5px;
+  padding: 6px;
+  color: rgba(187, 12, 12);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+.red-in:hover {
+  background: rgb(155, 5, 5);
+  color: white;
+}
+
+/* NAVIGATION */
+
+nav {
+  margin: 0 0.5rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+/* SECTION 1 */
+.section1 h3 {
+  font-size: 1.3rem;
+  line-height: 1rem;
+}
+.section1 p {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0.5rem 0;
+}
+img {
+  width: 100%;
+}
+.section1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+.section1 article:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+.section1 article:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+}
+.article-small {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 80px auto;
+  grid-template-rows: 80px;
+  grid-auto-rows: auto;
+}
+.article-small .article-p {
+  grid-column: span 2;
+  max-height: 6rem;
+  overflow: hidden;
+  opacity: 0.9;
+}
+.article-small .art-author,
+.article-small .text-hint {
+  grid-column: span 2;
+}
+.art-author {
+  opacity: 0.7;
+}
+.text-hint {
+  opacity: 0.7;
+}
+hr {
+  opacity: 0.3;
+  margin: 1rem;
+}
+
+/* SECTION 2 */
+
+.section2 {
+  height: 240px;
+  background: lightgray;
+  display: grid;
+  grid-template-columns: 200px 1fr auto 1fr;
+  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-areas: " img . . ." "img . h2 ." "img . p ." "img . form .";
+  text-align: center start;
+}
+.section2 img {
+  grid-area: img;
+  background: white;
+}
+.section2 h2 {
+  grid-area: h2;
+}
+.section2 p {
+  grid-area: p;
+}
+.section2 form {
+  grid-area: form;
+}
+form {
+  margin: 1rem 1rem 1rem 0;
+}
+form input {
+  border: none;
+  outline: none;
+  height: 2rem;
+  background: lightgray;
+  border-bottom: 1px solid black;
+}
+.button {
+  border: 1px solid #222;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  background: #222;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.button:hover {
+  background: white;
+  color: black;
+}
+
+/* content */
+
+.content {
+  margin: 3rem 0;
+  display: flex;
+  align-items: start;
+}
+
+.articles {
+  flex: auto;
+}
+
+.articles article {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "title img"
+    "content img"
+    "author img"
+    "details img";
+  margin-bottom: 2rem;
+}
+
+.articles article h3,
+.articles article p {
+  margin: 0.2rem 0;
+}
+
+.articles article img {
+  grid-area: img;
+}
+.articles article h3 {
+  grid-area: title;
+}
+
+.articles article p:first-child {
+  grid-area: content;
+}
+
+.articles article .article-author {
+  grid-area: author;
+}
+
+.articles article .text-hint {
+  grid-area: details;
+}
+
+.popular {
+  flex: 350px;
+  padding: 0 3rem;
+  position: sticky;
+  top: 45px;
+}
+
+.popular ul li {
+  display: grid;
+  grid-template-columns: 50px auto;
+  place-items: center center;
+  margin-bottom: 1rem;
+}
+
+.popular ul li div:first-child {
+  font-size: 3rem;
+  color: #444;
+}
+
+.popular ul li p,
+.popular ul li h3 {
+  margin: 1rem;
+}
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0.5rem 0;
+}
+img:hover {
+  filter: brightness(1.5);
+  transition: filter 0.2s ease-in;
+}
